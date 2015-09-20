@@ -6,7 +6,10 @@ $numbers = array('0','1','2','3','4','5','6','7','8','9');
 $pwdArray = array();
 
 //Some sanity checks on the value entered for Number of Words (defaults to 4 if nothing entered)
-($numWords = $_GET['NumWords']) || ($numWords = '4');
+if (isset($_GET['NumWords'])){
+  $numWords = $_GET['NumWords'];
+} else { $numWords = 4;
+}
 if ($numWords < 4 || $numWords > 9)
   $numWords=4;
 
