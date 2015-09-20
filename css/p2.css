@@ -68,8 +68,8 @@ img {
 	visibility: visible;
 }
 #words {
-	max-width: 5%;
-	min-width: 5%;
+	max-width: 32px;
+	min-width: 32px;
 }
 .pure-button-primary{
 	background-color: #1f8dd6;
@@ -82,4 +82,5 @@ img {
 	background-color: #ccc;
 	display: inline-block;
 	color: #1f8dd6;
+	font-size: 16pt;
 }

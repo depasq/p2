@@ -52,25 +52,23 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
           </div>
         </div>
 
-
-
       <div id="main">
         <div class="header">
         <h1>xkcd-Style Password Generator</h1>
       </div><br>
         <div class="content">
-          <div class="pure-g-r">
+          <div class="pure-g">
             <div class="pure-u-1-2">
-    	     <form class="pure-form pure-form-aligned" method='GET' action='index.php'>
+    	      <form class="pure-form pure-form-aligned" method='GET' action='index.php'>
              <fieldset>
     		       <div class="pure-control-group">
-                 <label for="NumWords"># of Words (4-10)</label><input id="words" type='text' class="pure-input" name='NumWords'><br>
+                 <label for="NumWords"># of Words (4-9)</label><input id="words" type='text' class="pure-input" name='NumWords'><br>
                </div>
     		        <div class="pure-control-group">
-                  <label for="Symbols" class="pure-checkbox">Add Symbol?</label><input type='checkbox' name='Symbol'><br>
+                  <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' name='Symbol'><br>
                 </div>
                 <div class="pure-control-group">
-                  <label for="Numbers">Add a Number?</label><input type='checkbox' name="Numbers"><br>
+                  <label for="Number">Add a Number?</label><input type='checkbox' name="Number"><br>
                 </div>
                 <div class="pure-control-group">
                   <label for="Capital">Capitalize?</label><input type='checkbox' name="Capital"><br>
@@ -78,16 +76,17 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
                <div class="pure-controls"><button type='submit' class="pure-button pure-button-primary">Generate Password</button>
                </div>
              </fieldset>
-    	</form>
-    </div>
-    <div class="pure-u-1-3">
-      <div class="pwd">
-        Test-Password-with-Lots-more-TExt-and-SOME-$YMB0L$
+    	      </form>
+          </div>
+          <div class="pure-u-1-2">
+            <div class="pwd">
+              <?php print join('-', $pwdArray); ?>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-    </div>
-    </div>
+
   </body>
 
   </html>
