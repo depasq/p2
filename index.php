@@ -56,17 +56,35 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
       <div id="main">
         <div class="header">
-        <h1>P2: XKCD-Style Password Generator</h1>
-        </div>
+        <h1>xkcd-Style Password Generator</h1>
+      </div><br>
         <div class="content">
-    	<form class="pure-form-stacked" method='GET' action='index.php'>
-
-    		<label for="NumWords"># of Words</label><input type='text' name='NumWords'><br>
-    		<input type='text' name='Symbol'><br>
-
-    		<input type='submit' value='Show A Password'>
-
+          <div class="pure-g-r">
+            <div class="pure-u-1-2">
+    	     <form class="pure-form pure-form-aligned" method='GET' action='index.php'>
+             <fieldset>
+    		       <div class="pure-control-group">
+                 <label for="NumWords"># of Words (4-10)</label><input id="words" type='text' class="pure-input" name='NumWords'><br>
+               </div>
+    		        <div class="pure-control-group">
+                  <label for="Symbols" class="pure-checkbox">Add Symbol?</label><input type='checkbox' name='Symbol'><br>
+                </div>
+                <div class="pure-control-group">
+                  <label for="Numbers">Add a Number?</label><input type='checkbox' name="Numbers"><br>
+                </div>
+                <div class="pure-control-group">
+                  <label for="Capital">Capitalize?</label><input type='checkbox' name="Capital"><br>
+                </div>
+               <div class="pure-controls"><button type='submit' class="pure-button pure-button-primary">Generate Password</button>
+               </div>
+             </fieldset>
     	</form>
+    </div>
+    <div class="pure-u-1-3">
+      <div class="pwd">
+        Test-Password-with-Lots-more-TExt-and-SOME-$YMB0L$
+      </div>
+    </div>
     </div>
     </div>
     </div>
