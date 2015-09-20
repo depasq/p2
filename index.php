@@ -6,11 +6,14 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
   <html>
 
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon-rocket.ico">
+    <title>Password Generator</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type='text/css'>
     <link rel="stylesheet" href="css/side-menu.css" type='text/css'>
     <link rel="stylesheet" href="css/p2.css" type='text/css'>
 
-    <title>Password Generator</title>
     <?php require 'logic.php'; ?>
 
   </head>
@@ -26,7 +29,7 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
         <div id="menu">
           <div class="pure-menu">
-            <a class="pure-menu-heading" href="#">DWA15</a>
+            <a class="pure-menu-heading" href="http://dwa15.jdepasquale.com/">DWA15</a>
             <ul class="pure-menu-list">
               <li class="pure-menu-item"><a href="http://p1.dwa15.jdepasquale.com/" class="pure-menu-link">Project 1</a>
                 <ul class="pure-menu-children">
