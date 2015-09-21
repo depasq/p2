@@ -40,8 +40,8 @@ $data = array(
  http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/ */
 $content = @DOMDocument::loadHTML(file_get_contents($data['link']));
 $grafList = $content->getElementsByTagName('p');
-$graf = $grafList[0];
-array_push($words, preg_split('/\s+/', $graf->nodeValue));
+$graf = $grafList[0]->nodeValue;
+array_push($words, preg_split('/\s+/', $graf));
 
 /*Clean the array to filter out any special characters as well
 ignore any words with less than 4 characters */
