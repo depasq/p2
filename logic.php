@@ -39,8 +39,9 @@ $data = array(
  looked into DOM type scraping and found this resource:
  http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/ */
 $content = @DOMDocument::loadHTML(file_get_contents($data['link']));
-$graf = $content->getElementsByTagName('p');
-array_push($words, preg_split('/\s+/', $graf[0]->nodeValue));
+$grafList = $content->getElementsByTagName('p');
+$graf = $grafList[0];
+array_push($words, preg_split('/\s+/', $graf->nodeValue));
 
 /*Clean the array to filter out any special characters as well
 ignore any words with less than 4 characters */
@@ -96,4 +97,4 @@ if (isset($_GET['Number'])) {
     array_push($pwdArray, $temp);
 }
 
-// print wordwrap(implode($sep, $pwdArray), 35, "&shy;", true);
+// print wordwrap(implode($sep, $pwdArray), 35, "<br\>\n", true);
