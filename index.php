@@ -14,7 +14,7 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
   <link rel="stylesheet" href="css/side-menu.css" type='text/css'>
   <link rel="stylesheet" href="css/p2.css" type='text/css'>
 
-  <?php require 'logic.php'; ?>
+    <?php require 'logic.php'; ?>
 
 </head>
 
@@ -57,15 +57,24 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
     <div id="main">
       <div class="header">
-      <h1>xkcd-Style Password Generator</h1>
+      <h1><a class="head-link" href="https://xkcd.com/936/" target="_blank">xkcd-Style</a> Password Generator</h1>
     </div><br>
       <div class="content">
+        <div class="pwd-block">
+          Random Password:<br>
+          <div class="pwd">
+            <?php print implode($sep, $pwdArray); ?>
+          </div>
+        </div>
         <div class="pure-g">
-          <div class="pure-u-1-2">
+          <div class="pure-u-1-3">
   	      <form class="pure-form pure-form-aligned" method='GET' action='index.php'>
            <fieldset>
   		       <div class="pure-control-group">
                <label for="NumWords"># of Words (4-9)</label><input id="words" type='text' class="pure-input" name='NumWords'><br>
+             </div>
+             <div class="pure-control-group">
+               <label for="Seperator">Seperator (default: -)</label><input id="words" type='text' class="pure-input" name='Seperator'><br>
              </div>
   		        <div class="pure-control-group">
                 <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' name='Symbol'><br>
@@ -80,12 +89,18 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
              </div>
            </fieldset>
   	      </form>
+          <img class="pure-img-responsive" src="./img/craft.jpg" alt="Chandra">
         </div>
         <div class="pure-u-1-2">
-          <div class="pwd">
-            <?php print implode('-', $pwdArray); ?>
-          </div>
+          Learn more:<br><a class="head-link" href=<?= $data['link']; ?> target="_blank"><?= $data['title']; ?></a>
+          <img class="pure-img-responsive" src=<?= $data['image']; ?> alt=<?= $data['source']; ?>>
         </div>
+      </div>
+      <div class="footer">
+        <p>The <a class="head-link" href="https://xkcd.com/936/" target="_blank">xkcd comic</a> that inspired this tool shows that passwords
+        composed of random words are easier to remember, yet harder for brute-force method attacks to guess.  This astronomically-biased password
+        generator sources the text of a randomly selected press release from the Chandra X-ray Observatory's
+        <a class="head-link" href="http://chandra.si.edu" target="_blank">public website</a>.</p>
       </div>
     </div>
   </div>
