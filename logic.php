@@ -31,21 +31,23 @@ $data = array(
   'image' => $cxcData[$entry][12]
 );
 
-//echo "<a href=" . $data['link'] ." target='_blank'>link</a>";
-//echo "<img src=" . $data['image'] . ">";
-
 /*tried doing regex matching but wasn't getting consistent results
  (only want the first paragraph of a press release - plenty to work with there)
  looked into DOM type scraping and found this resource:
  http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/ */
 $content = @DOMDocument::loadHTML(file_get_contents($data['link']));
 $grafList = $content->getElementsByTagName('p');
-$graf = $grafList[0]->nodeValue;
-array_push($words, preg_split('/\s+/', $graf));
+$i=0;
+foreach ($grafList as $graf) {
+    if ($i == 0) {
+        $words=preg_split('/\s+/', $content->saveHTML($graf));
+        $i++;
+    }
+}
 
 /*Clean the array to filter out any special characters as well
 ignore any words with less than 4 characters */
-foreach ($words[0] as $word) {
+foreach ($words as $word) {
     if (preg_match('/^[A-z]{4,100}+$/i', $word, $matches)) {
         array_push($cleanArray, $matches[0]);
     }
@@ -96,5 +98,3 @@ if (isset($_GET['Number'])) {
     $temp = array_pop($pwdArray) . $numbers[rand(0, 9)];
     array_push($pwdArray, $temp);
 }
-
-// print wordwrap(implode($sep, $pwdArray), 35, "<br\>\n", true);
