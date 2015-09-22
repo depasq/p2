@@ -83,7 +83,7 @@ for ($i=0; $i <= $numWords-1; $i++) {
    If nothing set, default to dash, otherwise check for multiple characters
    and take the first, or just accept the single character.
 */
-if (strlen($_GET['Seperator']) == 0) {
+if (empty($_GET['Seperator'])) {
     $sep = '-';
 } elseif (strlen($_GET['Seperator']) > 1) {
     $sep = substr($_GET['Seperator'], 0, 1);
