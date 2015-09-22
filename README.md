@@ -37,7 +37,7 @@ logic.php takes the input from the form to generate the password
 * Pure CSS Side Menu: css/side-menu.css
 * Referenced [this page](http://www.codedevelopr.com/articles/reading-csv-files-into-php-array/)
 for examples of how to open and read CSV files in php.
-* Ran into some trouble with the scraping early on when trying to find <p> elements
+* Ran into some trouble with the scraping early on when trying to find html tags
 using regular expression matching. After some searching, I found [this great](http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/)
 article on using DOMDocument to parse html.
 * Also hit a snag converting DOMElements to string and found a good answer [here](http://stackoverflow.com/questions/8964674/php-domdocument-how-to-convert-node-value-to-string).
