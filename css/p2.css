@@ -13,7 +13,7 @@
 	text-decoration: none;
 	color: #1f8dd6;
 }
-#words {
+.pure-input{
 	max-width: 35px;
 	min-width: 35px;
 }

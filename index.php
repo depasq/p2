@@ -71,19 +71,19 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
   	      <form class="pure-form pure-form-aligned" method='GET' action='index.php'>
            <fieldset>
   		       <div class="pure-control-group">
-               <label for="NumWords"># of Words (4-9)</label><input id="words" type='text' class="pure-input" name='NumWords'><br>
+               <label for="NumWords"># of Words (4-9)</label><input type='text' class="pure-input" id="NumWords"><br>
              </div>
              <div class="pure-control-group">
-               <label for="Seperator">Seperator (default: -)</label><input id="words" type='text' class="pure-input" name='Seperator'><br>
+               <label for="Seperator">Seperator (default: -)</label><input type='text' class="pure-input" id="Seperator"><br>
              </div>
   		        <div class="pure-control-group">
-                <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' name='Symbol'><br>
+                <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' id="Symbol"><br>
               </div>
               <div class="pure-control-group">
-                <label for="Number">Add a Number?</label><input type='checkbox' name="Number"><br>
+                <label for="Number">Add a Number?</label><input type='checkbox' id="Number"><br>
               </div>
               <div class="pure-control-group">
-                <label for="Capital">Capitalize?</label><input type='checkbox' name="Capital"><br>
+                <label for="Capital">Capitalize?</label><input type='checkbox' id="Capital"><br>
               </div>
              <div class="pure-controls"><button type='submit' class="pure-button pure-button-primary">Generate Password</button>
              </div>
@@ -92,19 +92,19 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
           <img class="pure-img-responsive" src="./img/craft.jpg" alt="Chandra">
         </div>
         <div class="pure-u-1-2">
-          Learn more:<br><a class="head-link" href=<?= $data['link']; ?> target="_blank"><?= $data['title']; ?></a>
-          <img class="pure-img-responsive" src=<?= $data['image']; ?> alt=<?= $data['source']; ?>>
+          Learn more:<br><a class="head-link" href='<?= $data['link']; ?>' target="_blank"><?= $data['title']; ?></a>
+          <img class="pure-img-responsive" src='<?= $data['image']; ?>' alt='<?= $data['source']; ?>'>
         </div>
       </div>
-      <div class="footer">
-        <p>The <a class="head-link" href="https://xkcd.com/936/" target="_blank">xkcd comic</a> that inspired this tool shows that passwords
-        composed of random words are easier to remember, yet harder for brute-force method attacks to guess.  This astronomically-biased password
-        generator sources the text of a randomly selected press release from the Chandra X-ray Observatory's
-        <a class="head-link" href="http://chandra.si.edu" target="_blank">public website</a>.</p>
+        <div class="footer">
+          <p>The <a class="head-link" href="https://xkcd.com/936/" target="_blank">xkcd comic</a> that inspired this tool shows that passwords
+          composed of random words are easier to remember, yet harder for brute-force method attacks to guess.  This astronomically-biased password
+          generator sources the text of a randomly selected press release from the Chandra X-ray Observatory's
+          <a class="head-link" href="http://chandra.si.edu" target="_blank">public website</a>.</p>
+        </div>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

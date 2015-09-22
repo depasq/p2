@@ -31,10 +31,15 @@ $data = array(
   'image' => $cxcData[$entry][12]
 );
 
-/*tried doing regex matching but wasn't getting consistent results
+/*
+tried doing regex matching but wasn't getting consistent results
  (only want the first paragraph of a press release - plenty to work with there)
  looked into DOM type scraping and found this resource:
- http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/ */
+ http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/
+
+Referenced this StackOverflow question on how to convert DOMElements into strings
+http://stackoverflow.com/questions/8964674/php-domdocument-how-to-convert-node-value-to-string
+ */
 $content = @DOMDocument::loadHTML(file_get_contents($data['link']));
 $grafList = $content->getElementsByTagName('p');
 $i=0;
