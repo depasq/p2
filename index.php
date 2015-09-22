@@ -1,7 +1,3 @@
-<?php
-error_reporting(E_ALL);       # Report Errors, Warnings, and Notices
-ini_set('display_errors', 1); # Display errors on page (instead of a log file)
-?>
 <!DOCTYPE html>
 <html>
 
@@ -71,19 +67,19 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
   	      <form class="pure-form pure-form-aligned" method='GET' action='index.php'>
            <fieldset>
   		       <div class="pure-control-group">
-               <label for="NumWords"># of Words (4-9)</label><input type='text' class="pure-input" id="NumWords"><br>
+               <label for="NumWords"># of Words (4-9)</label><input type='text' class="pure-input" id="NumWords" name="NumWords"><br>
              </div>
              <div class="pure-control-group">
-               <label for="Seperator">Seperator (default: -)</label><input type='text' class="pure-input" id="Seperator"><br>
+               <label for="Seperator">Seperator (default: -)</label><input type='text' class="pure-input" id="Seperator" name="Seperator"><br>
              </div>
   		        <div class="pure-control-group">
-                <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' id="Symbol"><br>
+                <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' id="Symbol" name="Symbol"><br>
               </div>
               <div class="pure-control-group">
-                <label for="Number">Add a Number?</label><input type='checkbox' id="Number"><br>
+                <label for="Number">Add a Number?</label><input type='checkbox' id="Number" name="Number"><br>
               </div>
               <div class="pure-control-group">
-                <label for="Capital">Capitalize?</label><input type='checkbox' id="Capital"><br>
+                <label for="Capital">Capitalize?</label><input type='checkbox' id="Capital" name="Captial"><br>
               </div>
              <div class="pure-controls"><button type='submit' class="pure-button pure-button-primary">Generate Password</button>
              </div>
