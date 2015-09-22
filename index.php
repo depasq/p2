@@ -70,7 +70,7 @@
                <label for="NumWords"># of Words (4-9)</label><input type='text' class="pure-input" id="NumWords" name="NumWords"><br>
              </div>
              <div class="pure-control-group">
-               <label for="Seperator">Seperator (default: -)</label><input type='text' class="pure-input" id="Seperator" name="Seperator"><br>
+               <label for="Separator">Separator (default: -)</label><input type='text' class="pure-input" id="Separator" name="Separator"><br>
              </div>
   		        <div class="pure-control-group">
                 <label for="Symbol" class="pure-checkbox">Add a Symbol?</label><input type='checkbox' id="Symbol" name="Symbol"><br>
@@ -79,7 +79,7 @@
                 <label for="Number">Add a Number?</label><input type='checkbox' id="Number" name="Number"><br>
               </div>
               <div class="pure-control-group">
-                <label for="Capital">Capitalize?</label><input type='checkbox' id="Capital" name="Captial"><br>
+                <label for="Capital">Capitalize?</label><input type='checkbox' id="Capital" name="Capital"><br>
               </div>
              <div class="pure-controls"><button type='submit' class="pure-button pure-button-primary">Generate Password</button>
              </div>

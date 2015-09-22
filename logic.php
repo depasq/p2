@@ -8,7 +8,7 @@ $pwdArray = array();
 $cleanArray = array();
 
 /*Define function to read in CSV file with information about Chandra press releases
-Searched for methods to read CSV file in python and used this:
+Searched for methods to read CSV file in php and used this:
 http://www.codedevelopr.com/articles/reading-csv-files-into-php-array/ */
 function readCSV($infile)
 {
@@ -69,7 +69,7 @@ if ($numWords < 4 || $numWords > 9) {
 }
 
 /* Main loop to generate the password
-   Check for capitalization within this loop to catch it early
+   Check for capitalization option within this loop
    also, make sure all words are lowercase when caps checkbox isn't selected
 */
 for ($i=0; $i <= $numWords-1; $i++) {
@@ -80,20 +80,21 @@ for ($i=0; $i <= $numWords-1; $i++) {
     }
 }
 
-/* Checks for adding Seperators, Symbols and Numbers
+/* Checks for adding Separators, Symbols and Numbers
+   For Separator:
+   If nothing set, default to dash, otherwise check for multiple characters
+   and take the first, or just accept the single character provided by user.
+
    For Symbols and Numbers:
    If set, pop out the last string in the array and append
    symbol and/or number to that string and push it back in
-   For Seperator:
-   If nothing set, default to dash, otherwise check for multiple characters
-   and take the first, or just accept the single character.
 */
-if (empty($_GET['Seperator'])) {
+if (empty($_GET['Separator'])) {
     $sep = '-';
-} elseif (strlen($_GET['Seperator']) > 1) {
-    $sep = substr($_GET['Seperator'], 0, 1);
+} elseif (strlen($_GET['Separator']) > 1) {
+    $sep = substr($_GET['Separator'], 0, 1);
 } else {
-    $sep = $_GET['Seperator'];
+    $sep = $_GET['Separator'];
 }
 if (isset($_GET['Symbol'])) {
     $temp = array_pop($pwdArray) . $symbols[rand(0, 7)];
