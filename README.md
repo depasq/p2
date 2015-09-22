@@ -20,7 +20,7 @@ the press release image and a link to the source of the text.
 
 
 ## Demo
-Coming soon...
+https://youtu.be/JRYrVhadC0I
 
 ## Details for teaching team
 This page uses PureCSS with additional custom formatting contained in css/p2.css
@@ -40,4 +40,4 @@ for examples of how to open and read CSV files in php.
 * Ran into some trouble with the scraping early on when trying to find <p> elements
 using regular expression matching. After some searching, I found [this great](http://blog.cnizz.com/2012/10/12/scrape-faster-with-php-domdocument-and-safely-with-tor/)
 article on using DOMDocument to parse html.
-* Also hit a snag converting DOMElements to string and found a good answer [here](http://stackoverflow.com/questions/8964674/php-domdocument-how-to-convert-node-value-to-string)
+* Also hit a snag converting DOMElements to string and found a good answer [here](http://stackoverflow.com/questions/8964674/php-domdocument-how-to-convert-node-value-to-string).

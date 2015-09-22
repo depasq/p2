@@ -44,7 +44,7 @@ $content = @DOMDocument::loadHTML(file_get_contents($data['link']));
 $grafList = $content->getElementsByTagName('p');
 $i=0;
 foreach ($grafList as $graf) {
-    if ($i == 0) {
+    if ($i <= 1) {
         $words=preg_split('/\s+/', $content->saveHTML($graf));
         $i++;
     }
