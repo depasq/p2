@@ -29,8 +29,9 @@ As mentioned above, the page uses a [CSV file](https://github.com/depasq/chandra
 Observatory's press releases as the catalyst for scraping text data from the site
 to generate passwords.  
 
-index.php handles the general layout with the side-menu, and form controls
-logic.php takes the input from the form to generate the password
+index.php handles the general layout with the side-menu, and form controls.
+
+logic.php takes the input from the form to generate the password.
 
 ## Outside code
 * Pure CSS: http://yui.yahooapis.com/pure/0.5.0/pure-min.css
