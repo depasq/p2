@@ -25,7 +25,7 @@ https://youtu.be/JRYrVhadC0I
 ## Details for teaching team
 This page uses PureCSS with additional custom formatting contained in css/p2.css
 
-As mentioned above, the page uses a CSV file with links to all of the Chandra
+As mentioned above, the page uses a [CSV file](https://github.com/depasq/chandra_skymap/blob/master/cxc_sources.csv) with links to all of the Chandra
 Observatory's press releases as the catalyst for scraping text data from the site
 to generate passwords.  
 
